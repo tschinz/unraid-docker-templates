@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Huggin</Name>
+  <Beta>False</Beta>
+  <Category>HomeAutomation:</Category>
+  <Overview>
+    Huginn is a system for building agents that perform automated tasks for you online.
+    They can read the web, watch for events, and take actions on your behalf.
+    Huginn's Agents create and consume events, propagating them along a directed graph. Think of it as a hackable version of IFTTT or Zapier on your own server.
+
+    You always know who has your data. You do.
+  </Overview>
+  <Registry>https://hub.docker.com/r/huginn/huginn/</Registry>
+  <GitHub>https://github.com/huginn/huginn</GitHub>
+  <Repository>huginn/huginn</Repository>
+  <Support>hilts.vaughan@gmail.com</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/huginn/huginn/master/media/huginn-icon-64.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="MySQL Database Directory" Target="/var/lib/mysql" Default="/mnt/user/appdata/Huggin" Mode="rw" Description="A place to store the persistent database of Huggins, where everything is stored in terms of application state." Display="always" Required="true">/mnt/user/appdata/Huggin</Config>
+  <!-- We do not want to run this with any kind of permissions -->
+  <Config Type="Variable" Name="Run as specified user" Target="APP_USER" Default="nobody" Description="Run application with specified user name." Mask="false" Display="advanced" Required="true">nobody</Config>
+  <!-- We need to ensure we run with the same nobody -->
+  <Config Type="Variable" Name="Run with user ID" Target="APP_UID" Default="99" Description="Run application with specified user id." Mask="false" Display="advanced" Required="true">99</Config>
+  <!-- Same deal, don't run on thing swe don't need -->
+  <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">99</Config>
+  <!-- Live on the edge -->
+  <Config Type="Variable" Name="Update on start-up." Target="EDGE" Default="1" Description="Update application during start-up." Mask="false" Display="advanced" Required="true">1</Config>
+  <!-- Permissions mask -->
+  <Config Type="Variable" Name="Permission mask." Target="UMASK" Default="002" Description="Mask controlling permission of newly create files and directories." Mask="false" Display="advanced" Required="true">002</Config>
+  <Config Type="Port" Name="Web UI Port" Target="3000" Default="3000" Mode="tcp" Description="This is the web UI port that exposes the web interface to run things with." Display="always" Required="true">3000</Config>
+</Container>
