@@ -13,7 +13,7 @@
   <Registry>https://hub.docker.com/r/huginn/huginn/</Registry>
   <GitHub>https://github.com/huginn/huginn</GitHub>
   <Repository>huginn/huginn</Repository>
-  <Support>hilts.vaughan@gmail.com</Support>
+  <Support>whynotlogic@gmail.com</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
