@@ -17,5 +17,5 @@
   <Icon>https://raw.githubusercontent.com/tschinz/unraid-docker-templates/master/tschinz-templates/icons/retroarch.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Game Directory" Target="/var/www/html/assets/cores" Default="/mnt/user/appdata/retroarch-web" Mode="rw" Description="Location of the game images" Display="always" Required="true">/mnt/user/appdata/retroarch-web</Config>
-  <Config Type="Port" Name="Web UI Port" Target="8080" Default="8081" Mode="tcp" Description="This is the web UI port that exposes the web interface to run things with." Display="always" Required="true">8081</Config>
+  <Config Type="Port" Name="Web UI Port" Target="80" Default="8081" Mode="tcp" Description="This is the web UI port that exposes the web interface to run things with." Display="always" Required="true">8081</Config>
 </Container>
