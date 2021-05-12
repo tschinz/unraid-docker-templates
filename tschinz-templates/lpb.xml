@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>La Planète Bleue Streamfetcher</Name>
+  <Beta>False</Beta>
+  <Category>Downloaders:</Category>
+  <Overview>
+    The "La Planète Bleue Streamfetcher" is a python application which lets you download all or the latest podcast from the "La Planète Bleue" Website.
+  </Overview>
+  <Registry>https://ub.docker.com/repository/docker/tschinz/laplanetebleue_streamfetcher</Registry>
+  <GitHub>https://github.com/tschinz/laplanetebleue_streamfetcher</GitHub>
+  <Repository>tschinz/laplanetebleue_streamfetcher</Repository>
+  <Support>whynotlogic@gmail.com</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <Icon>https://raw.githubusercontent.com/tschinz/laplanetebleue_streamfetcher/master/src/assets/lpb.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="Output Directory" Target="/data" Default="/mnt/user/appdata/lpb" Mode="rw" Description="Location of the podcast files" Display="always" Required="true">/mnt/user/appdata/lpb</Config>
+</Container>
