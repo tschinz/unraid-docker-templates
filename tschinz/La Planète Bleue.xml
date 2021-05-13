@@ -15,5 +15,5 @@
   <Network>bridge</Network>
   <Icon>https://raw.githubusercontent.com/tschinz/laplanetebleue_streamfetcher/master/src/assets/lpb.png</Icon>
   <ExtraParams></ExtraParams>
-  <Config Type="Path" Name="Output Directory" Target="/data" Default="/mnt/user/appdata/lpb" Mode="rw" Description="Location of the podcast files" Display="always" Required="true">/mnt/user/appdata/lpb</Config>
+  <Config Type="Path" Name="Output Directory" Target="/data" Default="/mnt/user/appdata/lpb" Mode="rw" Description="Location of the podcast files. Container Path: /data" Display="always" Required="true">/mnt/user/appdata/lpb</Config>
 </Container>
